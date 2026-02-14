@@ -14,8 +14,8 @@ dependencies = [
     "duckdb",
     "loguru",
     "pendulum",
-    "pydantic-settings"
-    ]
+    "pydantic-settings",
+]
 
 [project.scripts]
 dbt-airflow = "dbt_airflow:main"
