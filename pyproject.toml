@@ -1,0 +1,36 @@
+[project]
+name = "dbt-airflow"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "kaylamckenzie", email = "kmckenzie82@bethelu.edu" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "apache-airflow",
+    "boto3",
+    "dbt-duckdb",
+    "duckdb",
+    "loguru",
+    "pendulum",
+    "pydantic-settings"
+    ]
+
+[project.scripts]
+dbt-airflow = "dbt_airflow:main"
+
+[build-system]
+requires = ["uv_build>=0.8.6,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.1",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "N", "UP", "B", "S", "SIM", "RUF", "T20"]
